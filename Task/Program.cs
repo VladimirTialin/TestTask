@@ -38,5 +38,28 @@ void FillArray(string?[] array)
         Console.Write($"[{i}] ");
         array[i] = Console.ReadLine();
     }
-
+}
+string[] FindStringOfThreeSymbol(string[] array)
+{
+    string temp = string.Empty;
+    int j = 0, count = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        temp = array[i];
+        if (temp.Length <= 3)
+        {
+            count++;
+        }
+    }
+    string[] resultArray = new string[count];
+    for (int i = 0; i < array.Length; i++)
+    {
+        temp = array[i];
+        if (temp.Length <= 3)
+        {
+            resultArray[j] = temp;
+            j++;
+        }
+    }
+    return resultArray;
 }
