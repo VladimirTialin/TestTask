@@ -27,3 +27,16 @@
     Console.ResetColor();
     return size;
 }
+void FillArray(string?[] array)
+{
+    Console.Write("Заполните массив текстом.\nДля сохранения текста нажмите клавишу ");
+    Console.ForegroundColor = ConsoleColor.Green;
+    Console.WriteLine("Enter");
+    Console.ResetColor();
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"[{i}] ");
+        array[i] = Console.ReadLine();
+    }
+
+}
