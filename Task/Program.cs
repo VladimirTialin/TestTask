@@ -63,26 +63,3 @@ string[] FindStringOfThreeSymbol(string[] array)
     }
     return resultArray;
 }
-string Print(string[] array)
-{
-    string result = String.Empty;
-    for (int i = 0; i < array.Length; i++)
-    {
-
-        result += $"{array[i]}";
-        if (i != array.Length - 1)
-        {
-            result += ", ";
-        }
-    }
-    return result;
-}
-Console.ForegroundColor=ConsoleColor.Green;
-Console.WriteLine("Программа формирует массив из строк, длина которых меньше либо равна 3 символам.\n");
-Console.ResetColor();
-int arraySize = getFromUserArraySize();
-string[] textArray = new string[arraySize];
-FillArray(textArray);
-string[] result = FindStringOfThreeSymbol(textArray);
-Console.WriteLine($"\n[{Print(textArray)}] -> [{Print(result)}]");
-Console.ReadKey();
